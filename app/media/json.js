@@ -5,7 +5,7 @@ module.exports = {
         switch(req.query.method){
             case "query":
                 if (res.results && res.results.response && res.results.response.docs){
-                    res.send(JSON.stringify(res.results.response.docs))
+                    res.send(JSON.stringify(res.results.response))
                 } else {
                     res.status(404)
                 }
