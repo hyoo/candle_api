@@ -1,7 +1,12 @@
 const dataTypeRoutes = require('./dataTypeRoutes')
 const debug = require('debug')('routes')
+const cors = require('cors')
+
 
 module.exports = function(app, conf) {
+
+    // cors
+    app.use(cors());
 
     const allowedCollections = conf.solr.cores
 
